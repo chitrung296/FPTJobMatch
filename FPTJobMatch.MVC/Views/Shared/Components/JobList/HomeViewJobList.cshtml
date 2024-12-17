@@ -1,0 +1,14 @@
+﻿@model List<FPTJobMatch.MVC.Models.JobViewModel>
+
+<div class="row mt-2">
+    @foreach (var job in Model)
+    {
+        <div id="job-cards" class="col-md-4 mb-4">
+            <img src="@job.Image" alt="@job.Image" />
+            <h3 class="card-title">@job.Name</h3>
+            <p class="card-text">Company: @job.CompanyName</p>
+            <p class="card-text">Location: @job.Location</p>
+            <a href="" class="btn btn-primary">Apply Now</a>
+        </div>
+    }
+</div>

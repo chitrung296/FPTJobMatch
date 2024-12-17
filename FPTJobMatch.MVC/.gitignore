@@ -1,0 +1,16 @@
+﻿# Thư mục build
+bin/
+obj/
+
+# Visual Studio settings
+.vs/
+*.user
+*.suo
+
+# File tạm và log
+*.log
+*.tmp
+*.db
+
+# Khác
+**/Thumbs.db

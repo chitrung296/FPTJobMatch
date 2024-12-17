@@ -1,0 +1,64 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    z-index: 1030; 
+}
+.jumbotron {
+    background: url('/img/background.webp') no-repeat center center;
+    background-size: cover;
+}
+.jumbotron {
+    color: white; 
+    text-align: center; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 1); 
+}
+
+    .jumbotron h1 {
+        font-weight: bold;
+        color: #00c2cb; 
+    }
+
+    .jumbotron p {
+        font-size: 1.25rem;
+        
+    }
+
+    .jumbotron a {
+        color: white;
+        background-color: #007bff; 
+        border-color: #007bff;
+    }
+
+    .jumbotron a:hover {
+            background-color: #0056b3; 
+        }
+
+#job-cards {
+    text-align: center;
+    border: 1px solid #ccc; /* Đường viền màu xám nhạt, độ dày 1px */
+    border-radius: 5px; /* Làm tròn góc */
+    padding: 20px;
+}

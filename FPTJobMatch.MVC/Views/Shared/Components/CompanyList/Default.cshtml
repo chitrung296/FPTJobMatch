@@ -1,0 +1,33 @@
+﻿@model List<FPTJobMatch.MVC.Models.CompanyViewModel>
+
+<table class="table">
+    <tr>
+        <th width="5%">No</th>
+        <th width="20%">Name</th>
+        <th width="10%">Tax Number</th>
+        <th width="15%">Address</th>
+        <th width="15%">Hotline</th>
+        <th width="15%">Email</th>
+        <th width="20%">Action</th>
+    </tr>
+    @if(Model != null && Model.Count > 0)
+    {
+        foreach(var company in Model)
+        {
+            <tr>
+                <td>@company.Position</td>
+                <td>@company.Name</td>
+                <td>@company.TaxNumber</td>
+                <td>@company.Address</td>
+                <td>@company.Hotline</td>
+                <td>@company.Email</td>
+                <th>
+                    <a href="~/Company/Edit?idCompany=@company.Id" class="btn btn-primary">Edit</a>
+                </th>
+            </tr>
+        }
+    }
+
+    
+
+</table>

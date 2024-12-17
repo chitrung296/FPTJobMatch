@@ -1,0 +1,31 @@
+﻿@model List<FPTJobMatch.MVC.Models.JobSeekerViewModel>
+
+<table class="table">
+    <tr>
+        <th width="5%">No</th>
+        <th width="20%">Full Name</th>
+        <th width="15%">Date of Birth</th>
+        <th width="15%">Gender</th>
+        <th width="15%">Occupation</th>
+        <th width="30%">Action</th>
+    </tr>
+    @if(Model != null && Model.Count > 0)
+    {
+        foreach(var jobSeeker in Model)
+        {
+            <tr>
+                <td>@jobSeeker.Position</td>
+                <td>@jobSeeker.FullName</td>
+                <td>@jobSeeker.DateOfBirth</td>
+                <td>@jobSeeker.Gender.ToString()</td>
+                <td>@jobSeeker.Occupation.ToString()</td>
+                <th>
+                    <a href="~/JobSeeker/Edit?idJobSeeker=@jobSeeker.Id" class="btn btn-primary">Edit</a>
+                </th>
+            </tr>
+        }
+    }
+
+    
+
+</table>

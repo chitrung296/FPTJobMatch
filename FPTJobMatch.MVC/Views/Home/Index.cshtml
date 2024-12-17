@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="jumbotron bg-light p-5 rounded">
+    <h1 class="display-4">Find Your Dream Job</h1>
+    <p class="lead">Explore thousands of job listings tailored to your skills and preferences.</p>
+    <a class="btn btn-primary btn-lg" href="/Job/Create" role="button">Browse Jobs</a>
+</div>
+
+ @* <div class="row mt-5">  *@
+ @*     <h2>Featured Jobs</h2>  *@
+ @*     <div class="col-md-4 mb-4">  *@
+ @*         <div class="card">  *@
+ @*             <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Job Image">  *@
+ @*             <div class="card-body">  *@
+ @*                 <h5 class="card-title">Software Engineer</h5>  *@
+ @*                 <p class="card-text">Company: TechCorp<br>Location: Remote</p>  *@
+ @*                 <a href="#" class="btn btn-primary">Apply Now</a>  *@
+ @*             </div>  *@
+ @*         </div>  *@
+ @*     </div>  *@
+    
+ @* </div>  *@
+
+    
+    <div class="row mt-5">
+    <h3>Featured Jobs</h3>
+        
+        @await Component.InvokeAsync("JobList", new { isForHome = true })
+    </div>
+ 
+<div>
+    <div class="col-md-6 col-sm-12">
+        <h3>Danh sách loại công việc</h3>
+        @await Component.InvokeAsync("JobCategoryList")
+    </div>
+</div>

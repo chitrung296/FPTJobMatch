@@ -1,0 +1,59 @@
+﻿@model FPTJobMatch.MVC.Models.CompanyViewModel
+
+@{
+    ViewData["Title"] = "Create";
+    bool isCreate = Model == null;
+    string buttonName = isCreate ? "Create" : "Update";
+    string actionName = isCreate ? "Create" : "Edit";
+}
+
+<h1>Create Company</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="@actionName">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="Id" type="hidden" class="form-control" />
+
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hotline" class="control-label"></label>
+                <input asp-for="Hotline" class="form-control" />
+                <span asp-validation-for="Hotline" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TaxNumber" class="control-label"></label>
+                <input asp-for="TaxNumber" class="form-control" />
+                <span asp-validation-for="TaxNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-group" style="text-align: center">
+                <input type="submit" value="@buttonName" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-8">
+        @await Component.InvokeAsync("CompanyList")
+        </div>
+    </div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
